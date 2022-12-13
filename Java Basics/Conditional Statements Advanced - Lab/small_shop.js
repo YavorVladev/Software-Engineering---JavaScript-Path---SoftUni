@@ -11,7 +11,7 @@ function solve(input){
                 case "coffee": price = quantity * 0.50; break;
                 case "water": price = quantity * 0.80; break;
                 case "beer": price  = quantity * 1.20; break;
-                case "sweets": price = quantity * 1.30; break;
+                case "sweets": price = quantity * 1.45; break;
                 case "peanuts": price = quantity * 1.60; break;
             }
             break;
