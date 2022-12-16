@@ -1,44 +1,49 @@
-function solve(input){
-    let exam_h = Number(input[0]);
-    let exam_m = Number(input[1]);
-    let exam_a_h = Number(input[2]);
-    let exam_a_m = Number(input[3]);
+function exam(input) {
+    let examHour = Number(input.shift());
+    let examMinute = Number(input.shift());
+    let arriveHour = Number(input.shift());
+    let arriveMinute = Number(input.shift());
 
-    let exam_in_minutes = (exam_h * 60) + exam_m;
-    let ariv_in_min = (exam_a_h * 60) + exam_a_m;
-    let diff = (exam_in_minutes - ariv_in_min);
+    let examTotalMinutes = examHour * 60 + examMinute;
+    let arriveTotalMinutes = arriveHour * 60 + arriveMinute;
 
-    if (diff < 0) {
+    if (arriveTotalMinutes > examTotalMinutes) {
         console.log("Late");
-        let hours = Math.abs(~~(diff / 60));
-        let minutes = Math.abs(diff) % 60;
-
-        if (hours == 0) {
-            console.log(`${minutes} minutes after the start`);
-        } else {
-            console.log(`${hours}:${minutes.padStart(2, "0")} hours after the start`)
-        }
-    } else if (0 <= diff && diff <= 30) {
-        console.log(`On time`);
-
-        if (diff > 0) {
-            console.log(`${diff.toFixed(2)} minutes before the start`);
-        }
-    } else if (diff > 30) {
+    }
+    else if (examTotalMinutes - arriveTotalMinutes <= 30) {
+        console.log("On time");
+    }
+    else {
         console.log("Early");
-        hours = ~~(diff / 60);
-        minutes = Math.abs(diff) % 60;
+    }
 
-        if (hours == 0) {
-            console.log(`${minutes} minutes before the start`)
-
+    let result = Math.abs(examTotalMinutes - arriveTotalMinutes);
+    if (examTotalMinutes - arriveTotalMinutes > 0) {
+        if (result < 60) {
+            console.log(`${result} minutes before the start`);
         } else {
-            console.log(`${hours}:${minutes.padStart(2, "0")} hours before the start`)
+            if (result % 60 < 10) {
+                console.log(`${parseInt(result / 60)}:0${result % 60} hours before the start`);
+            } else {
+                console.log(`${parseInt(result / 60)}:${result % 60} hours before the start`);
+            }
         }
+    }
+    else if (arriveTotalMinutes - examTotalMinutes > 0) {
+        if (result < 60) {
+            console.log(`${result} minutes after the start`);
+        } else {
+            if (result % 60 < 10) {
+                console.log(`${parseInt(result / 60)}:0${result % 60} hours after the start`);
+            } else {
+                console.log(`${parseInt(result / 60)}:${result % 60} hours after the start`);
+            }
+        }
+
     }
 }
 
-solve(["16",
+exam(["16",
 "00",
 "15",
 "00"])
