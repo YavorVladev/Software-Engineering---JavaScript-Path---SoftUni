@@ -12,7 +12,7 @@ function solve(input){
 
         if (nights > 14) {
             studio_price *= 0.7
-        } else if (days > 7) {
+        } else if (nights > 7) {
             studio_price *= 0.95
         }
     } else if (month == "June" || month == "September") {
@@ -29,8 +29,7 @@ function solve(input){
 
     let total_apartment_price = nights * apartment_price
     let total_studio_price = nights * studio_price
-    console.log(`Apartment: ${total_apartment_price.toFixed(2)} lv.`)
-    console.log(`Studio: ${total_studio_price.toFixed(2)} lv.`)
+    console.log(`Apartment: ${total_apartment_price.toFixed(2)} lv.\nStudio: ${total_studio_price.toFixed(2)} lv.`)
     
 }
 
