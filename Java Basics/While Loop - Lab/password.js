@@ -10,7 +10,7 @@ function solve(input){
         index ++;
 
         if (current_password == password) {
-            console.log(`Welcome ${username}`)
+            console.log(`Welcome ${username}!`)
             break;
         }
 
