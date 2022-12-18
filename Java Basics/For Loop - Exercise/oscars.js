@@ -23,7 +23,7 @@ function solve(input) {
     if (points <= 1250.5) {
 
         let needed_points = 1250.5 - points
-        result = `Sorry, ${actor_name} you need ${needed_points.toFixed(1)} more!"`
+        result = `Sorry, ${actor_name} you need ${needed_points.toFixed(1)} more!`
 
     }
 
