@@ -19,7 +19,7 @@ function solve(input) {
     average_points /= tournaments_played
     let percent_won_tournaments = (won_tournaments / tournaments_played) * 100;
 
-    console.log(`Final points: ${starting_points}\nAverage points: ${Math.floor(average_points)}\n${percent_won_tournaments.toFixed(2)}`)
+    console.log(`Final points: ${starting_points}\nAverage points: ${Math.floor(average_points)}\n${percent_won_tournaments.toFixed(2)}%`)
 
 
 }
