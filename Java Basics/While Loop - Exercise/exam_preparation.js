@@ -38,7 +38,7 @@ function solve(input) {
     let average_score = sum_points/ total_problems;
 
     if (needs_break == false) {
-        console.log(`Average score ${average_score.toFixed(2)}\nNumber of problems: ${total_problems}\nLast problem: ${last_problem.slice(-1)}`)
+        console.log(`Average score: ${average_score.toFixed(2)}\nNumber of problems: ${total_problems}\nLast problem: ${last_problem.slice(-1)}`)
     } else {
         console.log(`You need a break, ${failures} poor grades.`)
     }
