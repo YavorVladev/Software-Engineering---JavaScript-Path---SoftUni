@@ -1,35 +1,27 @@
 function solve(input) {
-
-    let goal = 10000;
-    let steps_made = 0
-
-    while (true) {
-        if (steps_made >= goal) {
-            break;
-        }
-
-        let command = input.shift();
-
-        if (command == "Going home") {
-            break;
-        }
-
-
-        command = Number(command);
-        steps_made += command;
-
-
+    let totalSteps = 0;
+    let command = input.shift();
+  
+    while (totalSteps < 10000 && command !== 'Going home') {
+      let steps = Number(command);
+      totalSteps += steps;
+      command = input.shift();
     }
-
-    let steps_to_home = Number(input.shift());
-    steps_made += steps_to_home;
-
-    if (steps_made < goal) {
-        console.log(`${goal - steps_made} more steps to reach goal`);
+  
+    if (command === 'Going home') {
+      let finalSteps = Number(input.shift());
+      totalSteps += finalSteps;
+    }
+  
+    if (totalSteps < 10000) {
+      let finalResult = 10000 - totalSteps;
+      console.log(`${finalResult} more steps to reach goal.`);
     } else {
-        console.log(`Goal reached! Good job! ${steps_made - goal} steps over the goal!`)
+      console.log('Goal reached! Good job!');
+      let finalResult = totalSteps - 10000;
+      console.log(`${finalResult} steps over the goal!`);
     }
-}
+  }
 
 solve(["1000",
 "1500",
