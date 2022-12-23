@@ -11,7 +11,7 @@ function solve(input) {
         }
 
 
-        console.log(`Going to ${destination}`)
+        console.log(`Going to ${destination}!`)
         destination = input.shift();
     }
 }
