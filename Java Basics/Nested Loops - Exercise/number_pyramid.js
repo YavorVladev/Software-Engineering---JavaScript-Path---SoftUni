@@ -32,4 +32,4 @@ function solve ([arg1]) {
 
 }
 
-solve([10])
+solve(['12'])
