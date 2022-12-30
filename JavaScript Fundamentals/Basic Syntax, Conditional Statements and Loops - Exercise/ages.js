@@ -14,7 +14,7 @@ function solve(age) {
     } else if (given_age >= 66) {
         result = `elder`;
     } else {
-        result = `out of bonds`
+        result = `out of bounds`
     }
 
     console.log(result);
