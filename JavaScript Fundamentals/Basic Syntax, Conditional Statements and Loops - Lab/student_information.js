@@ -6,4 +6,4 @@ function solve(name,age,grade) {
 
 
 
-solve(['John',15,5.54678])
+solve('John', 15, 5.54678)
