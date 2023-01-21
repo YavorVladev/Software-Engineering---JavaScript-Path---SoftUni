@@ -4,4 +4,5 @@ function solve(n) {
         console.log(`${n} X ${i} = ${n * i}`)
     }
 }
+
 solve(5)
