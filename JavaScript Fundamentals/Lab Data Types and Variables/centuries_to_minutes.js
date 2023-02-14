@@ -8,4 +8,4 @@ function solve(centuries) {
     console.log(`${centuries} centuries = ${years} years = ${days} days = ${hours} = ${minutes} minutes`)
 }
 
-solve(1)
+solve(11)
