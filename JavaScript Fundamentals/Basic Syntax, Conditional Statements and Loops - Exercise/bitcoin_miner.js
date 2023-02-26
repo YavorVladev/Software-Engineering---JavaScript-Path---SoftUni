@@ -1,7 +1,7 @@
 function mine(shift) {
     const bitcoinPrice = 11949.16;
     const goldPrice = 67.51;
-    const theftRate = 0.3;
+    const theftRate = 0.3; 
   
     let totalGold = 0;
     let totalBitcoins = 0;
