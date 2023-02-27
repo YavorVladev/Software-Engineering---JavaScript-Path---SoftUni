@@ -21,7 +21,7 @@ function spiceMustFlow(startingYield) {
     }
 
     console.log(days);
-    console.log(extractedSpice) 
+    console.log(extractedSpice)  
 
 }
 
