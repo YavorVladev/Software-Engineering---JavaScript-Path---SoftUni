@@ -1,15 +1,15 @@
 function digitWithWords(digitWord) {
   switch (digitWord) {
     case "one": console.log(Number(1)); break;
-    case "two":
-    case "three":
-    case "four":
-    case "five":
-    case "six":
-    case "seven":
-    case "eight":
-    case "nine":
-    case "0":
+    case "two": console.log(Number(2)); break;
+    case "three": console.log(Number(3)); break;
+    case "four": console.log(Number(4)); break;
+    case "five": console.log(Number(5)); break;
+    case "six": console.log(Number(6)); break;
+    case "seven": console.log(Number(7)); break;
+    case "eight": console.log(Number(8)); break;
+    case "nine": console.log(Number(9)); break;
+    case "0": console.log(Number(0)); break;
   }
 }
 
